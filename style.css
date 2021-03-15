@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #333 url("img/if.jpg") no-repeat center -200px;
+  background-size: cover;
+  color: white;
+}
+
+#game-container {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 20px;
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+  height: 500px;
+}
+
+#game-container #player-1, #game-container #player-2 {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+#game-container #player-1 #player-play-1, #game-container #player-2 #player-play-1 {
+  color: #97fffc;
+  height: 30px;
+}
+
+#game-container #player-1 #player-play-2, #game-container #player-2 #player-play-2 {
+  color: #f292ff;
+  height: 30px;
+}
+
+#game-container #player-1 .player, #game-container #player-2 .player {
+  border-bottom: 1px solid;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+#game-container #player-1 .score, #game-container #player-2 .score {
+  width: 30%;
+  margin: auto;
+  height: 150px;
+  padding-top: 10px;
+  background-color: #301A4B;
+  border-radius: 10px;
+}
+
+#game-container #player-1 .score span, #game-container #player-2 .score span {
+  display: block;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+#game-container #player-1 .progress, #game-container #player-2 .progress {
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  padding-top: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#game-container #player-1 .progress span, #game-container #player-2 .progress span {
+  display: block;
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+#game-container #set {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+#game-container #set #new-game {
+  border: 1px solid white;
+  border-radius: 7px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition-duration: 300ms;
+}
+
+#game-container #set #new-game:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+#game-container #set #dice {
+  margin-top: 70px;
+  width: 125px;
+  height: 125px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+}
+
+#game-container #set #dice img {
+  width: 100%;
+  height: 100%;
+}
+
+.current-player {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.current-player::after {
+  content: '\026BE';
+  margin-left: 25px;
+}
+
+.double {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dice-anim {
+  transform: scale(0.5);
+  animation: f 300ms ease forwards;
+}
+
+#game-progress {
+  position: absolute;
+  bottom: 0;
+  height: 10px;
+  width: 0%;
+  max-width: 100%;
+  background-color: #e5d0ff;
+  transition: width 600ms ease;
+}
+
+.winner {
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom;
+  animation: w 1s infinite;
+}
+
+.game-over {
+  animation: e 1s infinite backwards;
+}
+
+#double-1, #double-2 {
+  font-size: 18px;
+}
+
+@keyframes e {
+  0%, 100% {
+    transform: scale(0.9) rotate(10deg);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+}
+
+@keyframes w {
+  0%, 50%, 100% {
+    transform: rotate(0);
+  }
+  25%, 35% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  75%, 85% {
+    transform: rotate(15deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes s {
+  from {
+    background-color: rgba(255, 0, 0, 0.4);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes f {
+  to {
+    transform: scale(1);
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" 
+        type="image/png" 
+         href="./img/favicon.ico">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dice</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="js.js" async defer></script>
+    </head>
+    <body>
+        <div id="game-container">
+            <div id="set">
+                <p id="new-game">NEW GAME</span></p>
+                <div id="dice"><img src="img/dice_3.png" alt="dice"></div>
+                <audio id="sound">
+                    <source src="./sounds/w.mp3" type="audio/ogg">
+                </audio>
+            </div>
+            <div id="player-1">
+                <div id="player-play-1" class="player current-player">Player 1</div>
+                <div  class="score score-1">Current score<span  id="current-1" class="span">0</span></div>
+                <div class="progress">Progress<span id="progress-1" class="span">0</span></div>
+                <div class="double">Double Numbers: <span id="double-1">0</span></div>
+
+            </div>
+            <div id="player-2">
+                <div id="player-play-2" class="player">Player 2</div>
+                <div class="score score-2">Current score<span  id="current-2" class="span">0</span></div>
+                <div class="progress">Progress<span id="progress-2" class="span">0</span></div>
+                <div class="double">Double Numbers: <span id="double-2">0</span></div>
+            </div>
+        </div>
+        <div id="game-progress"></div>
+    </body>
+</html>
